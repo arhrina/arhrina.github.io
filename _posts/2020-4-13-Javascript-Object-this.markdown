@@ -13,6 +13,32 @@ tags: js
 
 자바스크립트의 객체는 properties와 values로 이루어진다
 
+<h3>자바스크립트 객체(정확하게는 HTML 객체, 또는 HTML collection)는 js 명령어만을 들으며, jquery 명령어는 듣지 않는다. 반대도 마찬가지다</h3>
+
+<img src="https://github.com/arhrina/arhrina.github.io/blob/master/assets/img/innerImg/jsobject.png?raw=true">
+class로 찾아와서 HTMLElement들의 collection이 조회되었다. id로 조회하게 되면 element만 조회된다. 이것에 접근하려면 .get(0) 등으로 java collection에 접근하듯이 접근해주어야한다
+
+
+
+<img src="https://github.com/arhrina/arhrina.github.io/blob/master/assets/img/innerImg/naverjqueryobject.png?raw=true">
+jquery를 통해 DOM을 곧바로 처리하는 패턴이 지양되고 있고, 최근의 browser들은 DOM/BOM API를 잘 지원해주고 있으며, React, Angular, Vue같은 프론트엔드 라이브러리들에게 jquery가 주도권을 많이 넘겨주고 있기 때문에 최근 추세는 탈jquery이다
+
+
+<img src="https://github.com/arhrina/arhrina.github.io/blob/master/assets/img/innerImg/jqueryObject.png?raw=true">
+debugger를 걸어두고 jquery로 jquery 객체를 선택해보았다. .get(0) 등으로 html element에 접근하게 되면 jquery 함수는 통하지 않고, js 함수가 통하게 된다
+
+
+
+
+
+
+js와 jquery의 사용시에 console창에서 오류가 발생하는 부분에 대한 것은, 실행순서에 대해 별도로 포스팅을 하겠다
+
+
+
+<img src="https://github.com/arhrina/arhrina.github.io/blob/master/assets/img/innerImg/naverjqueryobject.png?raw=true">
+
+
 변수는
 
 ```javascript

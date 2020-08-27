@@ -18,9 +18,9 @@ tags: ajax
 
 * ajax를 사용함으로서 얻을 수 있는 것을 정리하자면,
 
-1. 페이지가 로드된 후에도 웹서버로부터 데이터를 읽어올 수 있다
-2. 페이지를 다시 불러올 필요없이 페이지를 업데이트를 할 수 있다
-3. Scene, 화면의 뒤에서 데이터를 웹서버로 보낼 수 있다
+1. 페이지가 <b>로드된 후에도 웹서버로부터 데이터를 읽어올</b> 수 있다
+2. 페이지를 <b>다시 불러올 필요없이</b> 페이지를 업데이트를 할 수 있다
+3. Scene, 화면의 <b>뒤</b>에서 데이터를 웹서버로 보낼 수 있다
 
 
 * ajax의 흐름
@@ -88,7 +88,7 @@ serialize해서 보내게 되면 form 태그 안에 들어있는 여러 input �
 .............어떤 컨트롤러
 
 @RequestMapping(value="/test/index", method="POST")
-@ResponseBody
+@ResponseBody // 리스폰스바디는 ret을 반드시 돌려줘야한다. 그리고 ajax는 반드시 ret이 필요하다. 리스폰스바디는 통신으로 받아온 데이터의 처리만을 하는 Restful uri로 사용하기 좋다
 public String indexPage(@RequestParam("test1") String t1, @RequestParam("test2") String t2) {
     System.out.println("전송된 테스트1값 : " + t1);
     System.out.println("전송된 테스트2값 : " + t2);
